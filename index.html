@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venkata Kiran Yalamarthi — Environmental Systems Engineer</title>
+<meta name="description" content="Environmental Systems Engineer at General Motors with 5+ years in software implementation, systems engineering, SQL, REST APIs, React and data analytics.">
+<meta name="author" content="Venkata Kiran Yalamarthi">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Venkata Kiran Yalamarthi — Environmental Systems Engineer">
+<meta property="og:description" content="5+ years in software implementation and systems engineering — system requirements, Agile delivery, SQL, REST APIs, React and data analytics.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232563eb'/><text y='68' x='50' text-anchor='middle' font-size='52' font-family='Georgia,serif' fill='white'>K</text></svg>">
+
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-card: #FFFFFF;
+    --text-primary: #1a1a1a;
+    --text-secondary: #6b6b6b;
+    --text-muted: #9a9a9a;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --accent-dark: #1d4ed8;
+    --border: #e8e8e4;
+    --border-hover: #d0d0cc;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(250,250,248,0.82);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s, box-shadow .3s;
+  }
+  nav.scrolled { border-bottom-color: var(--border); box-shadow: var(--shadow-sm); }
+  .nav-inner {
+    max-width: 1080px; margin: 0 auto; padding: 18px 32px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .logo {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.35rem; letter-spacing: .5px;
+    color: var(--text-primary); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 9px;
+  }
+  .logo span {
+    width: 30px; height: 30px; border-radius: 9px;
+    background: var(--accent); color: #fff;
+    display: grid; place-items: center;
+    font-size: .95rem; letter-spacing: 0;
+  }
+  .nav-links { display: flex; gap: 30px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none;
+    font-size: .93rem; font-weight: 500; letter-spacing: .1px;
+    position: relative; transition: color .2s;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; left: 0; bottom: -5px;
+    width: 0; height: 1.5px; background: var(--accent); transition: width .25s;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-toggle {
+    display: none; background: none; border: 1px solid var(--border);
+    border-radius: 10px; padding: 7px 10px; cursor: pointer; color: var(--text-primary);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: 96px 0 88px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent-light); color: var(--accent-dark);
+    padding: 6px 14px; border-radius: 999px;
+    font-size: .8rem; font-weight: 600; letter-spacing: .2px;
+    margin-bottom: 26px;
+  }
+  .badge i {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); display: block;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .45; transform: scale(.8); }
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.6rem, 6.5vw, 4.4rem);
+    line-height: 1.08; font-weight: 400;
+    letter-spacing: -1px; margin-bottom: 20px;
+  }
+  .hero .role {
+    font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+    color: var(--text-primary); font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .hero .role em { color: var(--accent); font-style: normal; }
+  .hero .lede {
+    font-size: 1.06rem; color: var(--text-secondary);
+    max-width: 660px; margin-bottom: 34px;
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 12px;
+    font-size: .93rem; font-weight: 600; text-decoration: none;
+    border: 1px solid transparent; transition: all .22s ease; cursor: pointer;
+  }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: var(--shadow-sm); }
+  .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .btn-ghost { background: var(--bg-card); color: var(--text-primary); border-color: var(--border); }
+  .btn-ghost:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 74px 0; }
+  .section-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(1.75rem, 3.6vw, 2.35rem);
+    font-weight: 400; letter-spacing: -.4px;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    color: var(--text-muted); font-size: .95rem;
+    margin-bottom: 38px;
+  }
+  .divider { height: 1px; background: var(--border); border: 0; }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid {
+    display: grid; grid-template-columns: 1.55fr 1fr;
+    gap: 46px; align-items: start;
+  }
+  .about-grid p { color: var(--text-secondary); margin-bottom: 16px; font-size: 1rem; }
+  .about-grid p strong { color: var(--text-primary); font-weight: 600; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px 18px;
+    transition: transform .22s, border-color .22s, box-shadow .22s;
+  }
+  .stat:hover { transform: translateY(-3px); border-color: var(--border-hover); box-shadow: var(--shadow-md); }
+  .stat .num {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.95rem; color: var(--accent); line-height: 1.1;
+  }
+  .stat .lbl {
+    font-size: .8rem; color: var(--text-muted);
+    margin-top: 4px; letter-spacing: .2px;
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+  }
+  .skill-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 24px;
+    transition: transform .22s, border-color .22s, box-shadow .22s;
+  }
+  .skill-card:hover { transform: translateY(-4px); border-color: var(--border-hover); box-shadow: var(--shadow-md); }
+  .skill-card h3 {
+    font-size: 1rem; font-weight: 600; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .skill-card h3 .ico {
+    width: 32px; height: 32px; flex: 0 0 32px;
+    border-radius: 9px; background: var(--accent-light);
+    display: grid; place-items: center; font-size: .95rem;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .74rem; font-weight: 400;
+    background: var(--bg); color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 7px;
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline { position: relative; padding-left: 30px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px;
+    width: 1.5px; background: var(--border);
+  }
+  .job { position: relative; margin-bottom: 42px; }
+  .job:last-child { margin-bottom: 0; }
+  .job::before {
+    content: ''; position: absolute; left: -30px; top: 8px;
+    width: 13px; height: 13px; border-radius: 50%;
+    background: var(--bg); border: 2.5px solid var(--accent);
+  }
+  .job-head {
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    align-items: baseline; gap: 8px; margin-bottom: 4px;
+  }
+  .job h3 { font-size: 1.12rem; font-weight: 600; }
+  .job .when {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .78rem; color: var(--text-muted); white-space: nowrap;
+  }
+  .job .where {
+    font-size: .93rem; color: var(--accent);
+    font-weight: 500; margin-bottom: 14px;
+  }
+  .job .where span { color: var(--text-muted); font-weight: 400; }
+  .job ul { list-style: none; display: grid; gap: 11px; }
+  .job li {
+    position: relative; padding-left: 20px;
+    color: var(--text-secondary); font-size: .96rem;
+  }
+  .job li::before {
+    content: '▸'; position: absolute; left: 0; top: 0;
+    color: var(--accent); font-size: .85rem;
+  }
+  .job li strong { color: var(--text-primary); font-weight: 600; }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 26px;
+    transition: transform .22s, border-color .22s, box-shadow .22s;
+  }
+  .edu-card:hover { transform: translateY(-3px); border-color: var(--border-hover); box-shadow: var(--shadow-md); }
+  .edu-card .job-head { margin-bottom: 6px; }
+  .edu-card h3 { font-size: 1.1rem; font-weight: 600; }
+  .edu-card .school { color: var(--accent); font-weight: 500; font-size: .95rem; }
+  .edu-card .note { color: var(--text-secondary); font-size: .92rem; margin-top: 10px; }
+  .gpa-pill {
+    display: inline-block; background: var(--accent-light); color: var(--accent-dark);
+    font-family: 'JetBrains Mono', monospace; font-size: .76rem; font-weight: 500;
+    padding: 3px 10px; border-radius: 999px; margin-left: 8px; vertical-align: middle;
+  }
+
+  /* ---------- COMPETENCIES ---------- */
+  .comp-cloud { display: flex; flex-wrap: wrap; gap: 9px; }
+  .comp {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 9px 15px;
+    font-size: .88rem; color: var(--text-secondary);
+    transition: all .2s;
+  }
+  .comp:hover {
+    border-color: var(--accent); color: var(--accent-dark);
+    background: var(--accent-light); transform: translateY(-2px);
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact { padding-bottom: 60px; }
+  .contact-lede {
+    font-size: 1.05rem; color: var(--text-secondary);
+    max-width: 620px; margin-bottom: 34px;
+  }
+  .contact-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 14px;
+  }
+  .contact-card {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px 20px;
+    text-decoration: none; color: inherit;
+    transition: transform .22s, border-color .22s, box-shadow .22s;
+  }
+  .contact-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow-md); }
+  .contact-card .ico {
+    width: 40px; height: 40px; flex: 0 0 40px;
+    border-radius: 11px; background: var(--accent-light);
+    display: grid; place-items: center; font-size: 1.05rem;
+  }
+  .contact-card .k { font-size: .76rem; color: var(--text-muted); letter-spacing: .3px; }
+  .contact-card .v { font-size: .93rem; font-weight: 500; word-break: break-word; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0 40px; margin-top: 20px;
+  }
+  .footer-inner {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: space-between; align-items: center;
+    font-size: .85rem; color: var(--text-muted);
+  }
+  .to-top {
+    color: var(--text-muted); text-decoration: none;
+    transition: color .2s;
+  }
+  .to-top:hover { color: var(--accent); }
+
+  /* ---------- REVEAL ---------- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px) {
+    .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+  @media (max-width: 720px) {
+    .wrap, .nav-inner { padding-left: 20px; padding-right: 20px; }
+    .hero { padding: 62px 0 56px; }
+    section { padding: 56px 0; }
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--bg-card); border-bottom: 1px solid var(--border);
+      flex-direction: column; align-items: flex-start;
+      gap: 0; padding: 8px 20px 16px; display: none;
+      box-shadow: var(--shadow-md);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 11px 0; width: 100%; font-size: 1rem; }
+    .cta-row .btn { flex: 1 1 auto; justify-content: center; }
+  }
+
+  @media print {
+    nav, .cta-row, .reveal { position: static; }
+    .reveal { opacity: 1; transform: none; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><span>K</span>Kiran Yalamarthi</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="badge"><i></i> Environmental Systems Engineer @ General Motors</div>
+    <h1>Venkata Kiran<br>Yalamarthi</h1>
+    <p class="role">Software Implementation &amp; Systems Engineering · <em>SQL · REST APIs · React · Python</em></p>
+    <p class="lede">
+      5+ years turning ambiguous business problems into shipped systems — developing and documenting
+      system requirements, running fast Agile sprints over data and analytic work tracks, designing SQL
+      and REST integrations between enterprise systems, and translating all of it for technical and
+      non-technical audiences alike.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="Kiran-Yalamarthi-Resume.pdf" download>↓ Download Résumé</a>
+      <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/kiran-yalamarthi-424119337" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap"><hr class="divider"></div>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap reveal">
+    <h2 class="section-title">About</h2>
+    <p class="section-sub">Engineering across the seam between business problems and working software.</p>
+    <div class="about-grid">
+      <div>
+        <p>
+          I'm an <strong>Environmental Systems Engineer</strong> at General Motors, working where software
+          implementation meets systems engineering. My day-to-day is breaking business problems into solvable
+          components, assessing requirements and their business implications, and arriving at recommended
+          solutions with minimal supervision — alongside subject matter experts and business partners on
+          cross-functional teams.
+        </p>
+        <p>
+          On the build side, I design <strong>SQL queries and stored procedures</strong> for data retrieval and
+          transformation, write and work with <strong>RESTful APIs</strong> and formats including JSON and XML,
+          support integrations between complex enterprise systems, and develop the data pipelines that connect
+          them. I build <strong>React</strong> frontend components for data visualization and prototype solutions
+          so users can explore new features before they're implemented.
+        </p>
+        <p>
+          A <strong>M.S. in Business Analytics (GPA 3.8)</strong> gives me the analytics foundation to pair
+          technical delivery with business judgment. I work across functions to build consensus, promote
+          innovation and process improvement, and communicate effectively at every stage of the SDLC.
+        </p>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="num">5+</div><div class="lbl">Years of experience</div></div>
+        <div class="stat"><div class="num">3.8</div><div class="lbl">Graduate GPA</div></div>
+        <div class="stat"><div class="num">M.S.</div><div class="lbl">Business Analytics</div></div>
+        <div class="stat"><div class="num">30%</div><div class="lbl">Open to travel</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="divider"></div>
+
+<!-- ================= SKILLS ================= -->
+<section class="skills" id="skills">
+  <div class="wrap reveal">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-sub">What I use to take a requirement from whiteboard to production.</p>
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3><span class="ico">⚙️</span> Software Implementation</h3>
+        <div class="tags">
+          <span class="tag">System requirements</span>
+          <span class="tag">COTS implementation</span>
+          <span class="tag">Custom software</span>
+          <span class="tag">Agile sprints</span>
+          <span class="tag">PoC design</span>
+          <span class="tag">Requirements documentation</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ico">🔌</span> Backend &amp; APIs</h3>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">JSON</span>
+          <span class="tag">XML</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Stored procedures</span>
+          <span class="tag">Enterprise integrations</span>
+          <span class="tag">Data pipelines</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ico">🖥️</span> Frontend &amp; Visualization</h3>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">UI components</span>
+          <span class="tag">Data visualization</span>
+          <span class="tag">Prototyping</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ico">📊</span> Data &amp; Analytics</h3>
+        <div class="tags">
+          <span class="tag">Python data analysis</span>
+          <span class="tag">Dimensional models</span>
+          <span class="tag">Research data platforms</span>
+          <span class="tag">Data exploration</span>
+          <span class="tag">Analytic agility</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ico">🔁</span> Agile &amp; SDLC</h3>
+        <div class="tags">
+          <span class="tag">Agile methodology</span>
+          <span class="tag">Rapid iteration</span>
+          <span class="tag">Sprint-based delivery</span>
+          <span class="tag">Full SDLC</span>
+          <span class="tag">Process improvement</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ico">🤝</span> Collaboration &amp; Quality</h3>
+        <div class="tags">
+          <span class="tag">Cross-functional teams</span>
+          <span class="tag">Consensus building</span>
+          <span class="tag">Stakeholder comms</span>
+          <span class="tag">QMS awareness</span>
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Jira</span>
+          <span class="tag">Confluence</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="divider"></div>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="experience" id="experience">
+  <div class="wrap reveal">
+    <h2 class="section-title">Experience</h2>
+    <p class="section-sub">Systems engineering and software implementation across automotive and enterprise environments.</p>
+
+    <div class="timeline">
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Environmental Systems Engineer — Software Implementation &amp; Analytics</h3>
+          <span class="when">Mar 2025 — Present</span>
+        </div>
+        <p class="where">General Motors <span>· Michigan</span></p>
+        <ul>
+          <li><strong>Developed and documented system requirements; broke business problems into solvable components</strong> — assessing requirements and business implications to arrive at recommended solutions with minimal supervision, working with subject matter experts and business partners on cross-functional teams.</li>
+          <li><strong>Executed rapid development of data and analytic work tracks over quick sprints</strong> — using Agile methodology with fast iteration, developing new concepts and proof-of-concept designs, and contributing to project-based research data files and information platforms for exploring and understanding data.</li>
+          <li><strong>Designed SQL queries and REST APIs; supported integrations between enterprise systems</strong> — writing SQL queries and stored procedures for data retrieval and transformation, working with RESTful APIs and formats including JSON and XML, and developing data pipeline solutions that connect systems and enable data flow.</li>
+          <li><strong>Built React frontend components and data analysis solutions</strong> — developing React-based components for data visualization and user interfaces, and building prototypes so users could visually understand and explore new features before implementation.</li>
+          <li><strong>Promoted innovation and process improvement across audiences</strong> — demonstrating analytic agility against fluid business needs, leveraging Agile software engineering for systems implementation, and communicating effectively to both technical and non-technical audiences across the SDLC.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Systems Engineer — Software Implementation &amp; Data Analytics</h3>
+          <span class="when">Apr 2020 — Jul 2023</span>
+        </div>
+        <p class="where">People Tech Group Inc. <span>· Hyderabad, India</span></p>
+        <ul>
+          <li><strong>Implemented software systems and developed data analytics for cross-functional stakeholders</strong> — developing and documenting system requirements and executing Agile rapid-development data and analytic work tracks.</li>
+          <li><strong>Designed SQL queries and REST APIs and built React frontend components</strong> — delivering proof-of-concept designs alongside subject matter experts on cross-functional teams.</li>
+          <li><strong>Communicated to technical and non-technical audiences while driving innovation</strong> — supporting process improvement initiatives throughout the delivery lifecycle.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="divider"></div>
+
+<!-- ================= EDUCATION ================= -->
+<section class="education" id="education">
+  <div class="wrap reveal">
+    <h2 class="section-title">Education</h2>
+    <p class="section-sub">Graduate training in analytics, machine learning and systems.</p>
+    <div class="edu-card">
+      <div class="job-head">
+        <h3>M.S. in Business Analytics <span class="gpa-pill">GPA 3.8</span></h3>
+        <span class="when">Aug 2023 — Dec 2024</span>
+      </div>
+      <p class="school">Adelphi University · New York, USA</p>
+      <p class="note">Concentration in data analytics, machine learning and systems. Satisfies master's-degree-plus qualification.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="divider"></div>
+
+<!-- ================= COMPETENCIES ================= -->
+<section class="competencies" id="competencies">
+  <div class="wrap reveal">
+    <h2 class="section-title">Core Competencies</h2>
+    <p class="section-sub">The work I'm consistently trusted with.</p>
+    <div class="comp-cloud">
+      <span class="comp">System Requirements Development &amp; Documentation</span>
+      <span class="comp">Agile Rapid Development &amp; Sprint Iteration</span>
+      <span class="comp">Business Problem Decomposition</span>
+      <span class="comp">SQL Query &amp; Stored Procedure Design</span>
+      <span class="comp">REST API Development (JSON / XML)</span>
+      <span class="comp">React &amp; JavaScript Frontend</span>
+      <span class="comp">Enterprise System Integration</span>
+      <span class="comp">Research Data Platform Development</span>
+      <span class="comp">Cross-Functional Stakeholder Collaboration</span>
+      <span class="comp">Technical &amp; Non-Technical Communication</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="divider"></div>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="contact-lede">
+      Open to conversations about systems engineering, software implementation and analytics roles —
+      and happy to travel up to 30%. The fastest way to reach me is email.
+    </p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:kiranyalamarthi07@gmail.com">
+        <span class="ico">✉️</span>
+        <span><span class="k">EMAIL</span><br><span class="v">kiranyalamarthi07@gmail.com</span></span>
+      </a>
+      <a class="contact-card" href="tel:+12017443396">
+        <span class="ico">📞</span>
+        <span><span class="k">PHONE</span><br><span class="v">(201) 744-3396</span></span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/kiran-yalamarthi-424119337" target="_blank" rel="noopener">
+        <span class="ico">💼</span>
+        <span><span class="k">LINKEDIN</span><br><span class="v">/in/kiran-yalamarthi</span></span>
+      </a>
+      <a class="contact-card" href="Kiran-Yalamarthi-Resume.pdf" download>
+        <span class="ico">📄</span>
+        <span><span class="k">RÉSUMÉ</span><br><span class="v">Download PDF</span></span>
+      </a>
+      <div class="contact-card" style="cursor:default">
+        <span class="ico">📍</span>
+        <span><span class="k">LOCATION</span><br><span class="v">Detroit, Michigan</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year">2026</span> Venkata Kiran Yalamarthi</span>
+    <a class="to-top" href="#">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Nav shadow on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile menu
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? '✕' : '☰';
+  });
+  links.addEventListener('click', e => {
+    if (e.target.tagName === 'A') {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '☰';
+    }
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
